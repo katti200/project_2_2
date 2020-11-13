@@ -1,0 +1,12 @@
+clearvars;
+h2r=2*pi;
+tstop=10;
+fs=48000;
+dt=1/fs;
+t=(0:dt:tstop);
+nfreq=50;
+K=0.05;
+sig1=sin(1*t*h2r);
+sig2=K*sin(nfreq*t*h2r);
+noise=sig1+sig2;
+plot(t,noise);
